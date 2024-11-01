@@ -25,7 +25,7 @@ for i in range(1,iter_times+1):
     w_2 -= learning_rate * grad
     if i%100 == 0:
         curr_loss = loss(A_2,w_2,y)
-        print(f"epoch {i}: loss = {curr_loss}")
+        print(f"epoch {i}: \tloss = {curr_loss} \tw = {w_2[0]} \tb = {w_2[1]}")
     if i%1000 == 0:
         color = plt.cm.viridis(i / iter_times)
         plt.plot(x, w_2[0] * x + w_2[1], color=color, label=f'Epoch {i} fitted line 2')
