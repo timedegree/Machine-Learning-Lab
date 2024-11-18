@@ -1,6 +1,6 @@
 # Machine Learning Lab
 
-My Machine Learning course assignments feel pretty basic XD
+My Machine Learning course assignments.
 
 ## Content
 - **Lab 1**: Learn basic operations with NumPy.
