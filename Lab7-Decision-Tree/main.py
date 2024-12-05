@@ -84,8 +84,8 @@ plt.figure(figsize=(10, 6))
 plt.scatter(train_features[train_labels == 0][:, 0], train_features[train_labels == 0][:, 1], color='blue', label='Class 0')
 plt.scatter(train_features[train_labels == 1][:, 0], train_features[train_labels == 1][:, 1], color='red', label='Class 1')
 
-x_min, x_max = train_features[:, 0].min(), train_features[:, 0].max()
-y_min, y_max = train_features[:, 1].min(), train_features[:, 1].max()
+x_min, x_max = train_features[:, 0].min()-0.5, train_features[:, 0].max()+0.5
+y_min, y_max = train_features[:, 1].min()-0.5, train_features[:, 1].max()+0.5
 xx, yy = np.meshgrid(np.linspace(x_min, x_max, 100), np.linspace(y_min, y_max, 100))
 grid = np.c_[xx.ravel(), yy.ravel(), np.ones(xx.ravel().shape[0])]
 predictions_grid = np.array([predict(decision_tree, sample) for sample in grid])
