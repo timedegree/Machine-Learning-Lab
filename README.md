@@ -12,6 +12,7 @@ My Machine Learning course assignments.
 - **Lab 5**: Implement a logistic regression model using gradient descent on a given dataset and visualize the training samples along with the decision boundary in 2D.
 - **Lab 6**: Use Linear Discriminant Analysis (LDA) to classify the dataset from Lab 5, calculate the sigmoid function for estimation, and plot the decision boundary in 2D.
 - **Lab 7**: Use Decision Tree to classify the dataset from Lab 5. Instead of a decision boundary, visualize the classification area in 2D.
+- **Lab 8**: Train an SVM model using sklearn's SVC with a linear kernel on 15% noisy training dataset from Lab 5, and visualize both the training samples and classification area in 2D.
 
 ## Usage
 
