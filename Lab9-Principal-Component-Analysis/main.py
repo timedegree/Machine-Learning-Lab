@@ -40,7 +40,7 @@ cov_matrix = np.cov(train_images_normalized, rowvar=False)
 eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
 sorted_eigenvalues = np.argsort(eigenvalues)[::-1]
 
-d = 140
+d = 200
 contribution_rate = np.sum(eigenvalues[sorted_eigenvalues][:d]) / np.sum(eigenvalues)
 #print('choice of the eigenvalues:', eigenvalues[sorted_eigenvalues][:0])
 print('contribution rate:', contribution_rate)
@@ -48,9 +48,10 @@ print('contribution rate:', contribution_rate)
 selected_eigenvectors = eigenvectors[:, sorted_eigenvalues[:d]]
 train_images_reduced = np.dot(train_images_normalized, selected_eigenvectors)
 
-test_images_reduced = np.dot(test_images, selected_eigenvectors)
+test_images_normalized = (test_images - train_images.mean(axis=0)) / train_images.std(axis=0)
+test_images_reduced = np.dot(test_images_normalized, selected_eigenvectors)
 
-predictions = hymmnos_knn(train_images_reduced, train_labels, test_images_reduced, k=100)
+predictions = hymmnos_knn(train_images_reduced, train_labels, test_images_reduced, k=10)
 accuracy = np.mean(predictions == test_labels)
 print('Accuracy:', accuracy)
 
