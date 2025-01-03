@@ -13,6 +13,7 @@ My Machine Learning course assignments.
 - **Lab 6**: Use Linear Discriminant Analysis (LDA) to classify the dataset from Lab 5, calculate the sigmoid function for estimation, and plot the decision boundary in 2D.
 - **Lab 7**: Use Decision Tree to classify the dataset from Lab 5. Instead of a decision boundary, visualize the classification area in 2D.
 - **Lab 8**: Train an SVM model using sklearn's SVC with a linear kernel on 15% noisy training dataset from Lab 5, and visualize both the training samples and classification area in 2D.
+- **Lab 9**: Transform FashionMNIST images to 784D vectors, apply PCA for dimensionality reduction to $d$, and use K-NN classification on the reduced test data.
 
 ## Usage
 
